@@ -50,7 +50,7 @@ const sfx={
 
 // ── Input ─────────────────────────────────────────────
 const keys={},jp=new Set();
-// コナミコマンド：↑↑↓↓←→←→BA
+// なつかしのコマンド：↑↑↓↓←→←→BA
 const KONAMI_KB=['ArrowUp','ArrowUp','ArrowDown','ArrowDown','ArrowLeft','ArrowRight','ArrowLeft','ArrowRight','KeyB','KeyA'];
 const KONAMI_KB_SET=new Set(KONAMI_KB);
 const KONAMI_GP=[12,12,13,13,14,15,14,15,1,0];// UP,UP,DOWN,DOWN,LEFT,RIGHT,LEFT,RIGHT,B,A
@@ -630,7 +630,7 @@ function draw(ctx){
     ctx.textAlign='center';
     if(status==='paused'){
       ctx.fillStyle='#00e5ff';ctx.font='bold 48px monospace';ctx.fillText('PAUSED',W/2,H/2-40);
-      ctx.fillStyle='#ffd700';ctx.font='bold 16px monospace';ctx.fillText('コナミコマンドを入力して無敵に！',W/2,H/2);
+      ctx.fillStyle='#ffd700';ctx.font='bold 16px monospace';ctx.fillText('なつかしのコマンドを入力して無敵に！',W/2,H/2);
       ctx.fillText('↑↑↓↓←→←→BA',W/2,H/2+32);
       ctx.fillStyle='#aaaaaa';ctx.font='14px monospace';ctx.fillText('START / Space で再開',W/2,H/2+72);
     } else if(status==='stage_announce'){
