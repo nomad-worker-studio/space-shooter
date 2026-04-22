@@ -9,7 +9,7 @@ A browser-based Space Invaders-style shooting game built with vanilla JavaScript
 - **3 Stages** — Progressive difficulty with unique enemy formations
 - **Boss Battles** — Face challenging boss enemies at the end of each stage
 - **Dynamic Gameplay** — Enemy dive attacks and varied firing patterns
-- **Konami Code** — Unlock invincibility with the classic cheat code (↑↑↓↓←→←→BA)
+- **Classic Cheat Code** — Unlock invincibility with the legendary cheat code (↑↑↓↓←→←→BA)
 - **Gamepad Support** — Play with keyboard or gamepad
 - **No Dependencies** — Pure JavaScript, runs directly in any modern browser
 
@@ -108,7 +108,7 @@ Built with ❤️ using Claude AI
 - **3つのステージ** — 異なる敵編隊配置で難易度が上昇
 - **ボス戦** — 各ステージ終了時にボスと対戦
 - **ダイナミックなゲームプレイ** — 敵の急降下攻撃と多彩な射撃パターン
-- **コナミコマンド対応** — 古典的なチートコード（↑↑↓↓←→←→BA）で無敵になれる
+- **なつかしのコマンド対応** — 伝説のチートコード（↑↑↓↓←→←→BA）で無敵になれる
 - **ゲームパッド対応** — キーボードまたはゲームパッドでプレイ可能
 - **依存関係なし** — 純粋な JavaScript、モダンブラウザなら直接実行可能
 
