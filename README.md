@@ -1,115 +1,98 @@
-# Claude 開発キット v1.0
+# Space Shooter
 
-Claude Code（Claude AI）にアイデアを伝えるだけで、
-設計→実装→テストまで高品質に自動で進む、自分専用の開発キットです。
+A browser-based Space Invaders-style shooting game built with vanilla JavaScript and HTML5 Canvas.
 
----
+## Play Now
 
-## 基本的な使い方
+🎮 **[Play the game](https://nomad-worker-studio.github.io/space-shooter/)**
+
+## Features
+
+- **3 Stages** — Progressive difficulty with unique enemy formations
+- **Boss Battles** — Face challenging boss enemies at the end of each stage
+- **Dynamic Gameplay** — Enemy dive attacks and varied firing patterns
+- **Konami Code** — Unlock invincibility with the classic cheat code (↑↑↓↓←→←→BA)
+- **Gamepad Support** — Play with keyboard or gamepad
+- **No Dependencies** — Pure JavaScript, runs directly in any modern browser
+
+## How to Play
+
+### Controls
+
+**Keyboard:**
+- `←` / `→` or `A` / `D` — Move left / right
+- `Space` — Fire
+- `Enter` — Start game
+
+**Gamepad:**
+- Left stick / D-pad — Move
+- A button — Fire
+- START button — Pause
+
+### Objective
+
+- Destroy all enemy formations to advance to the next stage
+- Defeat the boss to complete the stage
+- Survive 3 stages to win the game
+- Avoid enemy fire and dive attacks
+
+### Scoring
+
+- Type A Enemy: 30 points
+- Type B Enemy: 20 points
+- Type C Enemy: 10 points
+- Boss: 500–1200 points (depending on stage)
+
+## Technical Details
+
+- **Framework:** None (Vanilla JavaScript)
+- **Rendering:** HTML5 Canvas API
+- **Input:** Keyboard Events + Gamepad API
+- **Audio:** Web Audio API
+- **Size:** Single HTML file (~23 KB)
+
+## Running Locally
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/nomad-worker-studio/space-shooter.git
+   cd space-shooter
+   ```
+
+2. Open in browser:
+   ```bash
+   # Option 1: Direct file
+   open docs/index.html
+   
+   # Option 2: Local server (if you have Python)
+   python3 -m http.server 8000
+   # Then visit http://localhost:8000/docs/
+   ```
+
+## Project Structure
 
 ```
-/build-app
-ToDoアプリをElectronで作りたい。タスクの追加・完了・削除ができて、
-カテゴリ分けもできるようにしたい。
-```
-
-これだけで、Claude がコンセプト→仕様→設計→実装→テストまで自動で進めます。
-各フェーズで確認を求められるので、OKか修正指示を出すだけです。
-
----
-
-## セットアップ
-
-### 1. グローバル設定（初回のみ）
-
-`NomadWorker_Studio-claude/CLAUDE.md` を `~/.claude/CLAUDE.md` にコピーしてください。
-すでに CLAUDE.md がある場合は内容をマージしてください。
-
-```bash
-cp /c/NomadWorker_Studio-claude/CLAUDE.md "$HOME/.claude/CLAUDE.md"
-```
-
-### 2. アプリを作る（一番シンプルな使い方）
-
-1. このテンプレートを新しいフォルダにコピー
-2. Claude Code でそのフォルダを開く（`claude` コマンドで起動）
-3. アイデアを伝えるだけ：
-
-```
-/build-app
-学習記録を可視化するWebアプリを作りたい。
-毎日の学習内容と時間を記録して、週ごとにグラフで振り返れるようにしたい。
-```
-
-4. Claude が自動的にコンセプト → 仕様 → 設計 → 実装 → テストまで進めます
-5. 各フェーズで確認を求められるので、OKか修正指示を出すだけ
-
-### 3. 細かくコントロールしたい場合
-
-コンセプトや仕様を自分で書きたい場合は：
-1. `docs/concept/CONCEPT.md` にアプリのコンセプトを記入
-2. `docs/spec/SPEC.md` に仕様を記入
-3. チャットに `/init-project` と入力して実行
-
----
-
-## ディレクトリ構成
-
-```
-project-root/
-├── CLAUDE.md                    ← Claude が自動読み込み（全ルール統合済み）
-├── README.md                    ← このファイル
-│
-├── .claude/                     ← Claude Code 専用ディレクトリ
-│   ├── settings.json            ← 権限・ツール設定
-│   ├── commands/                ← カスタムスラッシュコマンド
-│   │   ├── build-app.md         ← `/build-app` で実行
-│   │   ├── init-project.md      ← `/init-project` で実行
-│   │   ├── plan.md              ← `/plan` で実行
-│   │   └── review.md            ← `/review` で実行
-│   └── skills/                  ← 専門手順（必要時に参照）
-│       ├── ui-design/SKILL.md
-│       ├── code-review/SKILL.md
-│       ├── codebase-awareness/SKILL.md
-│       └── parallel-dev/SKILL.md
-│
+space-shooter/
 ├── docs/
-│   ├── concept/CONCEPT.md       ← アプリのコンセプト（要記入）
-│   └── spec/SPEC.md             ← 機能仕様（要記入）
-│
-└── templates/                   ← 自動生成ドキュメントの雛形
-    ├── TASKS_TEMPLATE.md
-    └── PROJECT_STATE_TEMPLATE.md
+│   ├── index.html           ← GitHub Pages entry point
+│   ├── concept/CONCEPT.md   ← Game concept
+│   └── spec/SPEC.md         ← Game specification
+└── src/
+    ├── index.html           ← Game source (same as docs/index.html)
+    └── style.css            ← Minimal styling
 ```
 
----
+## Browser Compatibility
 
-## ワークフロー一覧
+Works on all modern browsers that support:
+- HTML5 Canvas
+- ES6 JavaScript
+- Gamepad API (optional, keyboard always works)
 
-| コマンド | 用途 |
-|----------|------|
-| `/build-app` | **メイン** — アイデアを伝えるだけで設計→実装→テストまで全自動 |
-| `/init-project` | 既存のCONCEPT/SPECからプロジェクト初期化 |
-| `/plan` | 特定機能の実装計画を作成（ハルシネーション対策） |
-| `/review` | コードレビューを実行 |
+## License
 
----
+Public domain. Feel free to fork, modify, and share!
 
-## よくある問題と対処法
+## Credits
 
-**Q: Claude がルールを無視する**
-→ `.agent/rules/` にファイルが正しく配置されているか確認。
-→ CLAUDE.md が `~/.claude/` にコピーされているか確認。
-→ Claude に「現在のルールを教えて」と入力して確認。
-
-**Q: 日本語で応答しない**
-→ `~/.claude/CLAUDE.md` にグローバル設定がコピーされていることを確認。
-→ チャットで「日本語で応答してください」と明示的に指示。
-
-**Q: 存在しない関数やファイルを参照する（ハルシネーション）**
-→ `codebase-awareness` スキルが配置されているか確認。
-→ 実装前に `/plan` で計画を立てさせる。
-
-**Q: スコープが勝手に広がる**
-→ CLAUDE.md の「Scope Control」ルールが有効か確認。
-→ 明示的に「MVP機能だけ実装して」と指示する。
+Built with ❤️ using Claude AI
