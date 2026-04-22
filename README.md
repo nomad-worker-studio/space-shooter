@@ -2,8 +2,6 @@
 
 A browser-based Space Invaders-style shooting game built with vanilla JavaScript and HTML5 Canvas.
 
-## Play Now
-
 🎮 **[Play the game](https://nomad-worker-studio.github.io/space-shooter/)**
 
 ## Features
@@ -96,3 +94,102 @@ Public domain. Feel free to fork, modify, and share!
 ## Credits
 
 Built with ❤️ using Claude AI
+
+---
+
+# Space Shooter（日本語）
+
+バニラ JavaScript と HTML5 Canvas で作られた、ブラウザで遊べるスペースインベーダー風シューティングゲーム。
+
+🎮 **[ゲームをプレイする](https://nomad-worker-studio.github.io/space-shooter/)**
+
+## 特徴
+
+- **3つのステージ** — 異なる敵編隊配置で難易度が上昇
+- **ボス戦** — 各ステージ終了時にボスと対戦
+- **ダイナミックなゲームプレイ** — 敵の急降下攻撃と多彩な射撃パターン
+- **コナミコマンド対応** — 古典的なチートコード（↑↑↓↓←→←→BA）で無敵になれる
+- **ゲームパッド対応** — キーボードまたはゲームパッドでプレイ可能
+- **依存関係なし** — 純粋な JavaScript、モダンブラウザなら直接実行可能
+
+## 遊び方
+
+### 操作方法
+
+**キーボード:**
+- `←` / `→` または `A` / `D` — 左右に移動
+- `スペースキー` — 射撃
+- `エンター` — ゲーム開始
+
+**ゲームパッド:**
+- 左スティック / 十字キー — 移動
+- A ボタン — 射撃
+- START ボタン — ポーズ
+
+### ゲーム目標
+
+- 敵編隊を全て撃破してステージをクリア
+- ボスを倒すとステージ完了
+- 3つのステージをクリアしたらゲーム勝利
+- 敵の弾と急降下攻撃を避ける
+
+### スコア
+
+- A 型敵: 30 ポイント
+- B 型敵: 20 ポイント
+- C 型敵: 10 ポイント
+- ボス: 500～1200 ポイント（ステージによって異なる）
+
+## 技術仕様
+
+- **フレームワーク:** なし（バニラ JavaScript）
+- **描画:** HTML5 Canvas API
+- **入力:** キーボードイベント + Gamepad API
+- **音声:** Web Audio API
+- **ファイルサイズ:** 単一 HTML ファイル（約 23 KB）
+
+## ローカルで実行
+
+1. リポジトリをクローン:
+   ```bash
+   git clone https://github.com/nomad-worker-studio/space-shooter.git
+   cd space-shooter
+   ```
+
+2. ブラウザで開く:
+   ```bash
+   # 方法1: ファイルを直接開く
+   open docs/index.html
+   
+   # 方法2: ローカルサーバーで実行（Python がインストール済みの場合）
+   python3 -m http.server 8000
+   # その後 http://localhost:8000/docs/ にアクセス
+   ```
+
+## ディレクトリ構成
+
+```
+space-shooter/
+├── docs/
+│   ├── index.html           ← GitHub Pages のエントリーポイント
+│   ├── concept/CONCEPT.md   ← ゲームコンセプト
+│   └── spec/SPEC.md         ← ゲーム仕様
+└── src/
+    ├── index.html           ← ゲームソース（docs/index.html と同じ）
+    └── style.css            ← 最小限のスタイリング
+```
+
+## ブラウザ互換性
+
+以下をサポートするモダンブラウザなら動作します:
+- HTML5 Canvas
+- ES6 JavaScript
+- Gamepad API（オプション、キーボードは常に動作）
+
+## ライセンス
+
+パブリックドメイン。自由にフォーク、改変、共有してください！
+
+## クレジット
+
+Claude AI を使用して ❤️ で制作しました
