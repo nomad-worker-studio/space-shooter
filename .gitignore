@@ -3,6 +3,9 @@
 .agents/
 AGENTS.md
 TASKS.md
+CLAUDE.md
+templates/
+setup.sh
 
 # 依存関係
 node_modules/
