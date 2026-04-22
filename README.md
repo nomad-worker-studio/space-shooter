@@ -21,11 +21,13 @@ A browser-based Space Invaders-style shooting game built with vanilla JavaScript
 - `←` / `→` or `A` / `D` — Move left / right
 - `Space` — Fire
 - `Enter` — Start game
+- `Esc` — Pause / Resume
+- `↑↑↓↓←→←→BA` — Unlock invincibility (classic cheat code)
 
 **Gamepad:**
 - Left stick / D-pad — Move
 - A button — Fire
-- START button — Pause
+- START button — Pause / Resume
 
 ### Objective
 
@@ -120,11 +122,13 @@ Built with ❤️ using Claude AI
 - `←` / `→` または `A` / `D` — 左右に移動
 - `スペースキー` — 射撃
 - `エンター` — ゲーム開始
+- `Esc` — ポーズ / 再開
+- `↑↑↓↓←→←→BA` — 無敵になれる（なつかしのコマンド）
 
 **ゲームパッド:**
 - 左スティック / 十字キー — 移動
 - A ボタン — 射撃
-- START ボタン — ポーズ
+- START ボタン — ポーズ / 再開
 
 ### ゲーム目標
 

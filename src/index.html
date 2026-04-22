@@ -287,9 +287,9 @@ function updateBoss(b,now){
 
 // ── Main update ───────────────────────────────────────
 function update(now){
-  // ポーズボタン（START）の rising edge 検出
+  // ポーズ：ESCキー or ゲームパッドSTARTの rising edge 検出
   const p=gp();
-  const startPressed=p?.buttons[9]?.pressed??false;
+  const startPressed=(p?.buttons[9]?.pressed??false)||jp.has('Escape');
   if(startPressed&&!prevStartPressed&&(status==='playing'||status==='paused')){
     status=status==='playing'?'paused':'playing';
     sfx.bleep();
@@ -632,7 +632,7 @@ function draw(ctx){
       ctx.fillStyle='#00e5ff';ctx.font='bold 48px monospace';ctx.fillText('PAUSED',W/2,H/2-40);
       ctx.fillStyle='#ffd700';ctx.font='bold 16px monospace';ctx.fillText('なつかしのコマンドを入力して無敵に！',W/2,H/2);
       ctx.fillText('↑↑↓↓←→←→BA',W/2,H/2+32);
-      ctx.fillStyle='#aaaaaa';ctx.font='14px monospace';ctx.fillText('START / Space で再開',W/2,H/2+72);
+      ctx.fillStyle='#aaaaaa';ctx.font='14px monospace';ctx.fillText('ESC / START で再開',W/2,H/2+72);
     } else if(status==='stage_announce'){
       ctx.fillStyle='#00e5ff';ctx.font='bold 44px monospace';ctx.fillText(STAGES[stage-1].label,W/2,H/2-20);
       ctx.fillStyle='#888888';ctx.font='18px monospace';ctx.fillText(STAGES[stage-1].sub,W/2,H/2+22);
