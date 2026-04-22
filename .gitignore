@@ -1,0 +1,21 @@
+# 開発ツール内部設定（公開不要）
+.claude/
+.agents/
+AGENTS.md
+TASKS.md
+
+# 依存関係
+node_modules/
+
+# 環境変数
+.env
+.env.local
+.env.*.local
+
+# OS
+.DS_Store
+Thumbs.db
+
+# ログ
+*.log
+npm-debug.log*

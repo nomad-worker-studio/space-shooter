@@ -1,0 +1,7 @@
+{
+  "name": "space-shooter",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "npx serve src -l 3000"
+  }
+}
